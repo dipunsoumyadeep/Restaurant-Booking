@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookKaro.com</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+</head>
+<body>
+    <section class="banner">
+        <div class="container">
+            <h1> <span>[</span> Book a <span class="span">Table</span> ]</h1>
+        </div>
+        <div class="card">
+            <div class="image"></div>
+            <div class="content">
+                <h3>Reservation</h3>
+                <form>
+                    <div class="form-row">
+                        <select name="restaurant" id="restName" required>
+                            <option value="select restaurant">--RESTAURANT--</option>
+                            <option value="7 biriyanis">7 Biriyani's</option>
+                            <option value="Chop Suey Restaurant">Chop Suey Restaurant</option>
+                            <option value="Kawa grill & lounge">Kawa grill & lounge</option>
+                            <option value="Barbeque Nation">Barbeque Nation</option>
+                            <option value="Haritage Restaurant">Haritage Restaurant</option>
+                            <option value="Alpha restaurant">Alpha restaurant</option>
+                            <option value="Aadaab Restaurant">Aadaab Restaurant</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="date" id="date" placeholder="Date*" required>
+                        <input type="time" name="time" id="time" min="08:00:00" max="20:00:00" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Name*" id="name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="number" placeholder="Phone*" id="phone">
+                        <input type="number" placeholder="Party Size*" id="size" required>
+                        
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" id="email" placeholder="Mail Id*" required>
+                        <!-- <input type="submit" value="Submit"> -->
+                    </div>
+                </form>
+                <div class="check">
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check">I, hereby confirm my booking details. <span>*</span>  </label>
+                </div>
+                <div class="form-row">
+                    <button type="submit" id="submitBtn">BOOK TABLE</button>
+                </div>
+                <div class="form-row work" id="demo"></div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module" src="main.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#date').datepicker({
+            dateFormat: "dd-mm-yy",
+            changeMonth: true,
+            changeYear: true,
+            maxDate: '3W',
+            minDate: '0M'
+        });
+    })
+</script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("eyFtSJixQ6WxtTycq");
+   })();
+</script>
+</html>

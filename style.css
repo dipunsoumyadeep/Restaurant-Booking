@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://cdn.vox-cdn.com/thumbor/uYXlrhtrNOXWPxXkuk7mP9TFQDk=/0x0:2880x1919/1200x800/filters:focal(1170x926:1630x1386)/cdn.vox-cdn.com/uploads/chorus_image/image/67139626/laxtg_olia_glendale_restaurant_0738_hor_clsc.0.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.card{
+    display: grid;
+    grid-template-columns: 420px 420px;
+    margin-top: 20px;
+}
+.image{
+    background: url(Background2.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* .banner h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 4em;
+    text-shadow: 2px 2px 10px ;
+    border: 3px solid aliceblue;
+    border-radius: 50px 0 50px 0;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    color: aliceblue;
+} */
+
+h1{
+    color: aliceblue;
+    border-bottom: 3px solid aliceblue;
+    font-size: 3em;
+}
+.content{
+    background-color: aliceblue;
+    height: 500px;
+}
+.content h3{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500px;
+}
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 12px 12px;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-family: 'Poppins', sans-serif;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: black;
+}
+/* form input[type = submit]{
+    color: aliceblue;
+    background-color: #f2745f;
+    border-radius: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 20px;
+} */
+button:hover{
+    background-color: blue;
+}
+.check{
+    text-align: center;
+    margin-bottom: 10px;
+}
+button{
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    background-color: #f2745f;
+    border-radius: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 14px;
+    border: none;
+}
+.work{
+    text-align: center;
+    font-size: 12px;
+}
+label{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 5px;
+}
+input[type="checkbox"]{
+    /* appearance: none;
+    -webkit-appearance: none; */
+    color: #f2745f;
+    cursor: pointer;
+}
+span{
+    color: crimson;
+}
+#restName{
+    text-transform: uppercase;
+}
+/* input[type="checkbox"]::after{
+
+} */
+@media(max-width:992px){
+    .card{
+        grid-template-columns: 100% ;
+    }
+    .image{
+        height: 330px;
+    }
+    .banner h1{
+        text-align: center;
+        font-size: 40px;
+    }
+    ::-webkit-scrollbar{
+        width: 0px;
+    }
+}
